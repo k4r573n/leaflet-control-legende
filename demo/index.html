@@ -8,7 +8,7 @@
 	<!--[if lte IE 8]><link rel="stylesheet" href="leaflet.ie.css" /><![endif]-->
 
 	<script src="leaflet.js"></script>
-	<script src="../Control.BingGeocoder.js"></script>
+	<script src="../Control.OSMGeocoder.js"></script>
 	<style type="text/css">
 	#map {
 		width: 800px;
@@ -26,9 +26,9 @@
 
 		var map = new L.Map('map').addLayer(cloudmade).setView(new L.LatLng(48.5, 2.5), 15);
 
-		var bingGeocoder = new L.Control.BingGeocoder('your-api-key');
+		var osmGeocoder = new L.Control.OSMGeocoder();
 
-		map.addControl(bingGeocoder);
+		map.addControl(osmGeocoder);
 	</script>
 </body>
 </html>
