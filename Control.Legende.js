@@ -1,4 +1,4 @@
-L.Control.OSMGeocoder = L.Control.extend({
+L.Control.InbazLegende = L.Control.extend({
 	options: {
 		collapsed: true,
 		position: 'bottomleft',

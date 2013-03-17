@@ -4,11 +4,11 @@
 	<title>Leaflet debug page</title>
 
 	<link rel="stylesheet" href="leaflet.css" />
-	<link rel="stylesheet" href="../Control.OSMGeocoder.css" />
+	<link rel="stylesheet" href="../Control.Legende.css" />
 	<!--[if lte IE 8]><link rel="stylesheet" href="leaflet.ie.css" /><![endif]-->
 
 	<script src="leaflet.js"></script>
-	<script src="../Control.OSMGeocoder.js"></script>
+	<script src="../Control.Legende.js"></script>
 	<style type="text/css">
 	#map {
 		width: 800px;
@@ -26,9 +26,9 @@
 
 		var map = new L.Map('map').addLayer(cloudmade).setView(new L.LatLng(48.5, 2.5), 15);
 
-		var osmGeocoder = new L.Control.OSMGeocoder();
+		var info = new L.Control.InbazLegende();
 
-		map.addControl(osmGeocoder);
+		map.addControl(info);
 	</script>
 </body>
 </html>
