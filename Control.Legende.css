@@ -19,3 +19,6 @@
 	height: 28px;
 }
 
+.leaflet-control-legende-head {
+  font-weight:bold;
+}

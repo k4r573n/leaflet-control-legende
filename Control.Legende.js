@@ -3,10 +3,11 @@ L.Control.InbazLegende = L.Control.extend({
 		collapsed: true,
 		position: 'bottomleft',
 		tooltip: 'Show info',
+    text: 'Icon Description',
 		callback: function (results) {
-      text = "";
+      text = '<span class="'+this.className+'-head">'+this.options.text+'</span><hr/>';
       for (i=0; i<results.length;i++) {
-        text += '<div><img src="images/conTag_'+results[i].id+'.png"/>'+
+        text += '<div class"'+this.className+'-entry"><img src="images/conTag_'+results[i].id+'.png"/>'+
                 '<b>'+results[i].name+'</b><br>'+results[i].desc+'</div>';
       }
       this._element.innerHTML = text;
@@ -21,7 +22,7 @@ L.Control.InbazLegende = L.Control.extend({
 
 	onAdd: function (map) {
 		this._map = map;
-		var className = 'leaflet-control-legende',
+    var className = this.className;
 			container = this._container = L.DomUtil.create('div', className);
 
 		L.DomEvent.disableClickPropagation(container);
@@ -80,6 +81,9 @@ L.Control.InbazLegende = L.Control.extend({
       this.options.collapsed = true;
     }
 
-  }
+  },
+
+
+  className : 'leaflet-control-legende'
 
 });
