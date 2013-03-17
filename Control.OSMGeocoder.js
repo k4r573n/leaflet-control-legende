@@ -86,6 +86,6 @@ L.Control.OSMGeocoder = L.Control.extend({
 	},
 
 	_collapse: function () {
-		this._container.className = this._container.className.replace(' leaflet-control-geocoder', '');
+		this._container.className = this._container.className.replace(' leaflet-control-geocoder-expanded', '');
 	}
 });
